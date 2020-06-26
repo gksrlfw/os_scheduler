@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OS</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Scheduling simulator</h1>
+<!--    사용자 입력값-->
+    <section id="inputs">
+        <form action="">
+            <div>
+                <span class="spans">Algorithm</span>
+                <span class="spans span2">Cores</span>
+                <span class="spans span3">Arrival Time</span>
+                <span class="spans span4">Burst Time</span>
+                <span class="spans span5 input_time">Time Quantums</span>
+                <span class="spans span6 time_limit">Time Limit</span>
+
+
+            </div>
+            <select id="algorithm" class="selects" onchange="selectAlgorithm()">
+                <option id="FCFS" selected>FCFS</option>
+                <option id="RR">RR</option>
+                <option id="HRRN">HRRN</option>
+                <option id="SRTN">SRTN</option>
+                <option id="SPN">SPN</option>
+                <option id="TLS">TLS</option>
+                <option id="FCFS_multi">FCFS multi</option>
+                <option id="SPN_multi">SPN multi</option>
+                <option id="HRRN_multi">HRRN multi</option>
+                <option id="SRTN_multi">SRTN multi</option>
+                <option id="RR_multi">RR multi</option>
+                <option id="TLS_multi">TLS multi</option>
+
+
+            </select>
+            <select id="cores" class="selects" onchange="selectCores()">
+<!--                <option id="1">1</option>-->
+                <option id="1">1</option>
+                <option id="2">2</option>
+                <option id="3">3</option>
+                <option id="4">4</option>
+
+            </select>
+            <input id="arrival"type="text" class="inputs" onKeyPress="return numKeyCheck(event)">
+            <input type="text" class="inputs" onKeyPress="return numKeyCheck(event)">
+            <input type="text" id="quantum" class="inputs input_time" onKeyPress="return numKeyCheck(event)">
+            <input type="text" id="time_limit" class="inputs time_limit" onKeyPress="return numKeyCheck(event)">
+            <button class="btn_add">추가</button>
+            <button class="btn_start">실행</button>
+            <button class="reset">초기화</button>
+        </form>
+    </section>
+<!--    입력받은 프로세스-->
+    <section id="process">
+        <fieldset class="process">
+            <legend>USER INPUTS</legend>
+            <table >
+                <tr>
+                    <td>Process</td>
+                    <td>AT</td>
+                    <td>BT</td>
+                    <td class="time_limit_td">LT</td>
+                </tr>
+                <!--            입력받은 프로세스들을 넣는다.-->
+            </table>
+        </fieldset>
+    </section>
+
+<!--    애니메이션-->
+    <section id="animation">
+        <fieldset class="process">
+            <legend>ANIMATIONS</legend>
+            <table>
+            </table>
+        </fieldset>
+    </section>
+<!--    결과-->
+    <section id="result">
+        <fieldset class="process">
+            <legend>RESULTS</legend>
+            <table >
+                <tr>
+                    <td>Process</td>
+                    <td>AT</td>
+                    <td>BT</td>
+                    <td>WT</td>
+                    <td>TT</td>
+                    <td>NTT</td>
+                </tr>
+    <!--            출력 결과.-->
+            </table>
+        </fieldset>
+    </section>
+    <script src="./js/Test.js"></script>
+</body>
+</html>
+

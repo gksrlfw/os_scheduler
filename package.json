@@ -1,0 +1,29 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "bootstrap": "^4.4.1",
+    "electron": "^8.2.1",
+    "popper.js": "^1.16.1"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "jquery": "^3.5.0",
+    "request": "^2.88.2"
+  }
+}
